@@ -1,12 +1,12 @@
 # test-layout-Van
 
-This is a test task
+This is a layout test task
 
-###Install
+### Install
 
 `npm install`
 
-###Dev mode
+### Dev mode
 
 ```
 make css// for bundle SASS

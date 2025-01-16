@@ -8,5 +8,8 @@
   </head>
   <body>
     <div class="test">hello</div>
+    <div class="lato-bold">Lato Bold</div>
+    <div class="lato-regular">Lato Regular</div>
+    <div class="korataki">Korataki</div>
   </body>
 </html>
