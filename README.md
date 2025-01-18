@@ -2,6 +2,9 @@
 
 This is a layout test task
 
+## Deploy
+[https://jaroslavrusanov.github.io/test-layout-Van/](https://jaroslavrusanov.github.io/test-layout-Van/)
+
 ### Install
 
 `npm install`
