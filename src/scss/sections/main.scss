@@ -1,0 +1,84 @@
+main {
+  margin: 12px 260px;
+}
+
+h2 {
+  font: 44px/61px "Korataki", sans-serif;
+}
+
+.container-cards {
+  @extend %row;
+  row-gap: 40px;
+  column-gap: 50px;
+  flex-wrap: wrap;
+}
+
+.card {
+  width: 320px;
+  height: 565px;
+  display: flex;
+  flex-direction: column;
+}
+
+.img-card {
+  padding-bottom: 20px;
+  border-radius: calc(10%);
+}
+
+.name {
+  padding-bottom: 12px;
+  font: 18px/25.2px "Lato Bold", sans-serif;
+}
+.price {
+  color: $orange;
+  font: 22px/30.8px "Lato Bold", sans-serif;
+}
+
+@media(width <= 1600px) {
+  main {
+    margin: 12px 180px;
+  }
+
+  h2 {
+    font-size: 40px;
+    line-height: 56px;
+  }
+
+  .container-cards {
+    row-gap: 30px;
+  }
+  
+  .card {
+    width: 287px;
+    height: 516px;
+  }
+}
+
+@media(width <= 770px) {
+  main {
+    margin: 12px 44px;
+  }
+
+  h2 {
+    font-size: 32px;
+    line-height: 44.8px;
+  }
+
+  .container-cards {
+    row-gap: 40px;
+    column-gap: 30px;
+  }
+  
+
+}
+
+@media(width <= 390px) {
+  main {
+    margin: 12px 35px;
+  }
+
+  .container-cards {
+    row-gap: 10px;
+    column-gap: 50px;
+  }
+}
