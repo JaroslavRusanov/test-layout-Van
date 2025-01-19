@@ -36,26 +36,6 @@ body {
   width: 1px;
 }
 
-.test {
-  padding: 16px;
-  background-color: red;
-}
-
-.korataki {
-  padding: 16px;
-  font: 16px/4px Korataki, sans-serif;
-}
-
-.lato-bold {
-  padding: 16px;
-  font: 16px/4px "Lato Bold", sans-serif;
-}
-
-.lato-regular {
-  padding: 16px;
-  font: 16px/4px "Lato Regular", sans-serif;
-}
-
 .wrapper {
   padding: 12px 260px;
   gap: 70px;
@@ -253,4 +233,9 @@ h2 {
   .container-cards {
     gap: 10px 50px;
   }
+}
+
+footer {
+  background-color: #0C0C0C;
+  color: #808080;
 }
