@@ -14,14 +14,67 @@ h2 {
 }
 
 .card {
-  width: 320px;
-  height: 565px;
   display: flex;
   flex-direction: column;
 }
 
+.discount {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+
+  width: 126px;
+  height: 38px;
+
+  background-color: $dark;
+  border-radius: 25px;
+
+  color: $white;
+  font-size: 16px;
+  line-height: 22.4px;
+  font-weight: 600;
+  text-align: center;
+  align-content: center;
+}
+
+.img-container {
+  position: relative;
+}
+
+.card-link {
+  position: absolute;
+  top: 80%;
+  left: 10%;
+
+  width: 258px;
+  height: 48px;
+
+  background-color: $orange;
+  border-radius: 25px;
+
+  text-decoration: none;
+  color: $white;
+  font-size: 16px;
+  line-height: 22.4px;
+  font-weight: 600;
+  text-align: center;
+  align-content: center;
+
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility ease 0s, opacity ease 1.5s;
+}
+
+.card:hover .card-link{
+  display: block;
+  visibility: visible;
+  opacity: 1;
+}
+
 .img-card {
   padding-bottom: 20px;
+  max-width: 322px;
+  max-height: 477px;
   border-radius: calc(10%);
 }
 
@@ -29,9 +82,20 @@ h2 {
   padding-bottom: 12px;
   font: 18px/25.2px "Lato Bold", sans-serif;
 }
+
 .price {
-  color: $orange;
+  @extend %row;
+  gap: 16px;
   font: 22px/30.8px "Lato Bold", sans-serif;
+}
+
+.new-price {
+  color: $orange;
+}
+
+.prev-price {
+  color: $transparent;
+  text-decoration: line-through;
 }
 
 @media(width <= 1600px) {
@@ -46,11 +110,6 @@ h2 {
 
   .container-cards {
     row-gap: 30px;
-  }
-  
-  .card {
-    width: 287px;
-    height: 516px;
   }
 }
 
@@ -72,7 +131,7 @@ h2 {
 
 }
 
-@media(width <= 390px) {
+@media(width <= 400px) {
   main {
     margin: 12px 35px;
   }
@@ -80,5 +139,9 @@ h2 {
   .container-cards {
     row-gap: 10px;
     column-gap: 50px;
+  }
+
+  .discount {
+    display: none;
   }
 }
