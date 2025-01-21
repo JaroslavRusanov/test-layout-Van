@@ -1,4 +1,9 @@
 @font-face {
+  font-family: Inter;
+  src: url("../assets/fonts/Inter.ttf");
+}
+
+@font-face {
   font-weight: 400;
   font-family: Korataki;
   src: url("../assets/fonts/Korataki.ttf");
@@ -37,6 +42,7 @@ body {
 }
 
 .wrapper {
+  margin: auto;
   padding: 12px 260px;
   gap: 70px;
   justify-content: flex-end;
@@ -46,8 +52,8 @@ body {
 }
 
 .navigation {
-  margin: 12px 260px;
-  justify-content: space-around;
+  padding: 12px 260px;
+  justify-content: space-between;
   align-items: center;
   gap: 100px;
 }
@@ -60,29 +66,33 @@ body {
 }
 
 .container-btn {
+  position: relative;
   justify-content: space-around;
   align-items: center;
   gap: 20px;
 }
 
 .search {
-  position: relative;
   width: 170px;
   height: 40px;
   border: 1px solid #F5F5F5;
   border-radius: 25px;
   font: 16px/16px "Lato Regular", sans-serif;
+  z-index: 0;
 }
 
-.search::before {
+.icon-search-dark {
   position: absolute;
-  width: 22px;
-  height: 22px;
-  background-image: url("../assets/search-normal-dark.svg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  content: "";
+  top: 10px;
+  left: 145px;
+  z-index: 1;
+}
+
+.icon-search {
+  position: absolute;
+  top: 10px;
+  left: 12.5px;
+  z-index: 10;
 }
 
 .btn-basket {
@@ -92,23 +102,22 @@ body {
   border-radius: 25px;
   justify-content: center;
   align-items: center;
+  gap: 5px;
   font: 16px/16px "Lato Regular", sans-serif;
   color: #FFF;
 }
 
-.img-bag {
-  position: relative;
-}
-
-.img-bag::before {
+.bag-counter {
   position: absolute;
+  top: 5px;
+  right: 82px;
   width: 18px;
   height: 18px;
+  border-radius: 50%;
   background-color: #FFF;
-  background-image: url("../assets/Frame132.svg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  content: "";
+  color: #231815;
+  font-size: 12px;
+  line-height: 16.8px;
 }
 
 .sandwitch {
@@ -120,10 +129,18 @@ body {
     padding: 12px 180px;
   }
 
+  .navigation {
+    padding: 12px 180px;
+  }
+
   .search {
     width: 40px;
     height: 40px;
     background-color: #231815;
+  }
+
+  .icon-search-dark {
+    display: none;
   }
 }
 
@@ -133,7 +150,7 @@ body {
   }
 
   .navigation {
-    margin: 12px 44px;
+    padding: 12px 44px;
   }
 
   .container-nav {

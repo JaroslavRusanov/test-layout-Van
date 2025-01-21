@@ -1,4 +1,5 @@
 .wrapper {
+  margin: auto;
   padding: 12px 260px;
   @extend %row;
   gap: 70px;
@@ -11,9 +12,9 @@
 }
 
 .navigation {
-  margin: 12px 260px;
+  padding: 12px 260px;
   @extend %row;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   gap: 100px;
 }
@@ -28,6 +29,7 @@
 }
 
 .container-btn {
+  position: relative;
   @extend %row;
   justify-content: space-around;
   align-items: center;
@@ -35,26 +37,27 @@
 }
 
 .search {
-  position: relative;
   width: 170px;
   height: 40px;
   border: 1px solid #F5F5F5;
   border-radius: 25px;
 
   font: 16px/16px "Lato Regular", sans-serif;
+  z-index: 0;
 }
 
-.search::before {
+.icon-search-dark {
   position: absolute;
-  width: 22px;
-  height: 22px;
- 
-  background-image: url("../assets/search-normal-dark.svg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+  top: 10px;
+  left: 145px;
+  z-index: 1;
+}
 
-  content: "";
+.icon-search {
+  position: absolute;
+  top: 10px;
+  left:12.5px;
+  z-index: 10;
 }
 
 .btn-basket {
@@ -66,29 +69,24 @@
   @extend %row;
   justify-content: center;
   align-items: center;
+  gap: 5px;
 
   font: 16px/16px "Lato Regular", sans-serif;
   color: $white;
 }
 
-.img-bag {
-  position: relative;
-}
-
-.img-bag::before {
+.bag-counter {
   position: absolute;
+  top: 5px;
+  right: 82px;
 
   width: 18px;
   height: 18px;
-
+  border-radius: 50%;
   background-color: $white;
-
-  background-image: url("../assets/Frame132.svg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  
-
-  content: "";
+  color: $dark;
+  font-size: 12px;
+  line-height: 16.8px;
 }
 
 .sandwitch {
@@ -100,11 +98,18 @@
     padding: 12px 180px;
   }
 
+  .navigation {
+    padding: 12px 180px;
+  }
+
   .search {
     width: 40px;
     height: 40px;
     background-color: $dark;
+  }
 
+  .icon-search-dark {
+    display: none;
   }
 }
 
@@ -114,7 +119,7 @@
   }
 
   .navigation {
-    margin: 12px 44px;
+   padding: 12px 44px;
   }
 
   .container-nav {

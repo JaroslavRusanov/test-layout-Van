@@ -11,8 +11,12 @@ header
       nav О&nbspкомпании
       nav Контакты
     .container-btn
-      label(for="input-search").sr-only Search
-      input(type="text" id="input-search" value="Лампы").search
+      .container-input
+        label(for="input-search").sr-only Search
+        input(type="text" id="input-search" value="Лампы").search
+        img(src="./src/assets/search-normal-dark.svg" alt="icon search").icon-search-dark
+        img(src="./src/assets/search-normal.svg" alt="icon search").icon-search
       button.btn-basket
         img(src="./src/assets/Bag.svg").img-bag
+        .bag-counter 3
         div Корзина
