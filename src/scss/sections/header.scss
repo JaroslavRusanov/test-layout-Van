@@ -135,8 +135,12 @@
   }
 }
 
-@media(width <= 390px) {
+@media(width <= 400px) {
+  .wrapper {
+    padding: 12px 35px;
+  }
+
   .navigation {
-    margin: 12px 35px;
+    padding: 12px 35px;
   }
 }
