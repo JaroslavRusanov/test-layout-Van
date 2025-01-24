@@ -19,7 +19,7 @@
   src: url("../assets/fonts/Lato-Bold.ttf");
 }
 
-.price, .btn-basket, .container-btn, .container-nav, .navigation, .wrapper {
+.payments, .price, .btn-basket, .container-btn, .container-nav, .navigation, .wrapper {
   display: flex;
   flex-direction: row;
 }
@@ -43,7 +43,6 @@ body {
 }
 
 .wrapper {
-  margin: auto;
   padding: 12px 260px;
   gap: 70px;
   justify-content: flex-end;
@@ -131,7 +130,7 @@ body {
   }
 
   .navigation {
-    padding: 12px 180px;
+    padding: 12px 100px;
   }
 
   .search {
@@ -188,7 +187,6 @@ h2 {
 .container-cards {
   padding-bottom: 60px;
   display: grid;
-  grid-template-rows: repeat(2, 1fr);
   grid-template-columns: repeat(4, 1fr);
   gap: 50px;
 }
@@ -289,6 +287,11 @@ h2 {
     max-width: 280px;
     max-height: 428px;
   }
+
+  .card-link {
+    top: 78%;
+    left: 4%;
+  }
 }
 
 @media (width <= 770px) {
@@ -302,7 +305,6 @@ h2 {
   }
 
   .container-cards {
-    grid-template-rows: repeat(4, 1fr);
     grid-template-columns: repeat(2, 1fr);
     gap: 50px;
   }
@@ -347,7 +349,73 @@ h2 {
   }
 }
 
-footer {
+.container-footer {
+  padding: 60px 260px;
   background-color: #0C0C0C;
+  color: #F5F5F5;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  align-items: center;
+}
+
+h4 {
+  color: #FFF;
+  line-height: 18px;
+}
+
+p {
+  font: 16px/16px "Lato Regular", sans-serif;
+}
+
+.logo-white {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.address {
+  grid-column: 2;
+  line-height: 24px;
+}
+
+.contacts {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+.services {
+  grid-column: 3;
+  grid-row: 1/span 2;
+}
+
+.services p {
+  margin-bottom: 0 0 20px 0;
+}
+
+.agreements {
+  grid-column: 4;
+  grid-row: 1;
+  text-align: end;
+  line-height: 22.4px;
   color: #808080;
+}
+
+.confidentional {
+  grid-column: 1;
+  grid-row: 2;
+  color: #808080;
+  line-height: 20.8px;
+}
+
+.payments {
+  grid-column: 4;
+  grid-row: 2;
+  justify-content: end;
+  gap: 33px;
+}
+
+@media (width <= 1600px) {
+  .container-footer {
+    padding: 60px 100px;
+  }
 }

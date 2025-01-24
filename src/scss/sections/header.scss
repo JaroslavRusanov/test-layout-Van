@@ -1,5 +1,4 @@
 .wrapper {
-  margin: auto;
   padding: 12px 260px;
   @extend %row;
   gap: 70px;
@@ -99,7 +98,7 @@
   }
 
   .navigation {
-    padding: 12px 180px;
+    padding: 12px 100px;
   }
 
   .search {
