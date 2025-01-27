@@ -172,12 +172,9 @@ body {
 }
 
 @media (width <= 400px) {
-  .wrapper {
-    padding: 12px 35px;
-  }
-
   .navigation {
     padding: 12px 35px;
+    gap: 0;
   }
 }
 
@@ -325,6 +322,10 @@ h2 {
     padding: 12px 35px;
   }
 
+  .card a {
+    display: none;
+  }
+
   .container-cards {
     gap: 30px;
   }
@@ -436,6 +437,7 @@ p {
     padding: 60px 35px;
     grid-template-columns: repeat(3, 1fr);
     align-items: flex-start;
+    gap: 30px;
   }
 
   .logo-white {
@@ -473,7 +475,7 @@ p {
   .confidentional {
     grid-row: 4;
     grid-column: 2/span 2;
-    padding-left: 4 0;
+    padding-left: 40px;
   }
 }
 
@@ -486,5 +488,9 @@ p {
 
   .payments {
     padding-top: 72px;
+  }
+
+  .confidentional {
+    padding-left: 0;
   }
 }

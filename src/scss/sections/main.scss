@@ -151,6 +151,11 @@ h2 {
     padding: 12px 35px;
   }
 
+  .card {
+    a {
+      display: none;
+    }
+  }
   .container-cards {
     gap: 30px;
   }
