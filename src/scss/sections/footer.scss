@@ -6,7 +6,6 @@
 
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(2, 1fr);
   align-items: center;
 }
 
@@ -16,7 +15,7 @@ h4 {
 }
 
 p {
-  font: 16px/16px "Lato Regular", sans-serif
+  font: 16px/16px "Lato Regular", sans-serif;
 }
 
 .logo-white {
@@ -26,6 +25,7 @@ p {
 
 .address {
   grid-column: 2;
+  grid-row: 1;
 
   line-height: 24px;
 }
@@ -59,8 +59,14 @@ p {
   grid-column: 1;
   grid-row: 2;
 
+  max-width: 322px;
+
+  padding-left: 50px;
+
   color: $transparent;
-  line-height: 20.8px;
+  p {
+    line-height: 20.8px;
+  }
 }
 
 .payments {
@@ -69,6 +75,7 @@ p {
   
   @extend %row;
   justify-content: end;
+  align-items: center;
   gap: 33px;
 
 }
@@ -76,5 +83,66 @@ p {
 @media(width <= 1600px) {
   .container-footer {
     padding: 60px 100px;
+  }
+}
+
+@media(width <= 770px) {
+  .container-footer {
+    padding: 60px 35px;
+
+    grid-template-columns: repeat(3, 1fr);
+    align-items: flex-start;
+  }
+  
+  .logo-white {
+    grid-column: 1 / span 3;
+  }
+
+  .address {
+    grid-row: 2;
+    grid-column: 1;
+  }
+
+  .contacts {
+    grid-row: 2;
+    grid-column: 2;
+  }
+
+  .services {
+    grid-row: 2 / span 2;
+    grid-column: 3;
+  }
+
+  .agreements {
+    grid-row: 3;
+    grid-column: 1 / span 2;
+
+    text-align: start;
+  }
+
+  .payments {
+    padding-top: 20px;
+    grid-row: 4;
+    grid-column: 1;
+    justify-content: start;
+  }
+
+  .confidentional {
+    grid-row: 4;
+    grid-column: 2 / span 2;
+
+    padding-left: 4 0px;
+  }
+}
+
+@media(width <= 400px) {
+  .container-footer {
+    display: flex;
+    flex-direction: column;
+    gap: 10px
+  }
+
+  .payments {
+    padding-top: 72px;
   }
 }

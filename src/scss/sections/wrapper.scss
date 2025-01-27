@@ -1,0 +1,24 @@
+.wrapper {
+  padding: 12px 260px;
+  @extend %row;
+  gap: 70px;
+  justify-content: flex-end;
+  background-color: $dark;
+
+  color: $white;
+
+  font: 16px/16px "Lato Regular", sans-serif;
+}
+
+@media(width <= 1600px) {
+  .wrapper {
+    padding: 12px 180px;
+  }
+}
+
+@media(width <= 770px) {
+  .wrapper {
+    padding: 0;
+    display: none;
+  }
+}
